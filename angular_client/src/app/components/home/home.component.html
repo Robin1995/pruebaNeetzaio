@@ -1,0 +1,107 @@
+<div class="jumbotron">
+    <h1>Creación de usuarios</h1>
+<form class="form-user" #formUser="ngForm" (ngSubmit)="saveNewUser()"  >
+  <h3>Datos personales</h3>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputName">Nombre</label>
+      <input type="text" class="form-control" id="inputName" name="inputName" [(ngModel)]="Name" placeholder="Nombre">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastName">Apellido</label>
+      <input type="text" class="form-control" id="inpuLastName" name="inputLastName"  [(ngModel)]="LastName" placeholder="Apellido">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="inputTypeDocument">Tipo documento</label>
+        <select id="inputTypeDocument"  name="inputTypeDocument" class="form-control"  [(ngModel)]="TypeDocumentId">
+          <option selected disabled>Seleccione...</option>
+          <option value="T.I">T.I</option>
+          <option value="C.C">C.C</option>
+        </select>
+      </div>
+    <div class="form-group col-md-3">
+        <label for="inputDocument">Documento</label>
+        <input type="number" class="form-control" id="inputDocument"name="inputDocument" placeholder="Documento"  [(ngModel)]="Document">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="inputPlaceExpedition">Lugar de expedición</label>
+        <input type="text" class="form-control" id="inputPlaceExpedition"  name="inputPlaceExpedition"  [(ngModel)]="placeExpedition" placeholder="Lugar de expedición">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="inputDateExpedition">Fecha de expedición</label>
+        <input type="date" class="form-control" id="inputDateExpedition"name="inputDateExpedition"  [(ngModel)]="dateExpedition" placeholder="Fecha de expedición">
+    </div>
+    <div class="form-group col-md-12 ">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inputMilitar" name="inputMilitar"  [(ngModel)]="IsMilitar"> 
+          <label class="form-check-label" for="inputMilitar">
+           Tiene libreta militar
+          </label>
+        </div>
+    </div>
+    <div class="form-group col-md-3">
+        <label for="inputCountry">Pais de origen</label>
+        <select id="inputCountry" name="inputCountry" class="form-control"  [(ngModel)]="CountryId">
+          <option selected disabled>Seleccione...</option>
+          <option value="100">Colombia</option>
+          <option value="101">Chile</option>
+        </select>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputCity">Ciudad</label>
+      <input type="text" class="form-control" id="inputCity"  name="inputCity" placeholder=""  [(ngModel)]="City">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputAddress">Dirección</label>
+      <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="Ej:Cra..."  [(ngModel)]="Address">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputPhone">Teléfono</label>
+      <input type="number" class="form-control" id="inputphone"  name="inputphone"  placeholder="Teléfono"  [(ngModel)]="Phone">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputCelPhone">Celular</label>
+      <input type="number" class="form-control" id="inputCelPhone" name="inputCelPhone" placeholder="Celular"  [(ngModel)]="CelPhone">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputEmergencyName">Contacto de emergencia</label>
+      <input type="text" class="form-control" id="inputEmergencyName" name="inputEmergencyName" placeholder="Nombre"  [(ngModel)]="EmergencyName">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputEmergencyPhone">Telefono de emergencia</label>
+      <input type="number" class="form-control" id="EmergencyPhone" name="EmergencyPhone" placeholder="Telefono"  [(ngModel)]="EmergencyPhone">
+    </div>
+   
+  </div>
+ 
+  <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="inputUser">Usuario</label>
+          <input type="text" class="form-control" id="inputUser" name="inputUser" placeholder="Usuario"  [(ngModel)]="username">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword">Contraseña</label>
+          <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password"  [(ngModel)]="password">
+      </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail">Correo</label>
+      <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Correo"  [(ngModel)]="email">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="inputEmail2">Repita el Correo</label>
+        <input type="email" class="form-control" id="inputEmail2" name="inputEmail2" placeholder="Correo verificado"  [(ngModel)]="emailVerified">
+    </div>
+  </div>
+  <div class="form-group col-md-6">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="inputTemp" name="inputTemp"  [(ngModel)]="IsTemporal">
+        <label class="form-check-label" for="inputTemp">
+         Usuario temporal
+        </label>
+      </div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>
+
+</div>

@@ -1,0 +1,36 @@
+{
+  "name": "Country_TB",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "CountryCode": {
+      "type": "String",
+      "required": true,
+      "length": 4,
+      "max": 4
+    },
+    "CountryName": {
+      "type": "String",
+      "required": true,
+      "length": 100
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Country_Id": {
+      "type": "hasMany",
+      "model": "ContactInfo_TB",
+      "foreignKey": "CountryID",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      },
+      "through": "ContactInfo_TB"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

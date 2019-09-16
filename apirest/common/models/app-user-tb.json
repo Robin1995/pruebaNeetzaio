@@ -1,0 +1,79 @@
+{
+  "name": "AppUser_TB",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "LastName": {
+      "type": "string",
+      "required": true,
+      "length": 20,
+      "max": 20
+    },
+    "Name": {
+      "type": "string",
+      "required": true,
+      "length": 20,
+      "max": 20
+    },
+    "IsMilitar": {
+      "type": "boolean",
+      "required": true
+    },
+    "TimeCreate": {
+      "type": "date",
+      "required": true
+    },
+    "IsTemporal": {
+      "type": "boolean",
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "emailVerified": {
+      "type": "string",
+      "required": true
+    },
+    "verificationToken": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ContactInfo": {
+      "type": "hasMany",
+      "model": "ContactInfo_TB",
+      "foreignKey": "User",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      },
+      "through": "ContactInfo_TB"
+    },    
+    "UserDocument": {
+      "type": "hasMany",
+      "model": "UserDocument_TB",
+      "foreignKey": "User",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      },
+      "through": "UserDocument_TB"
+    }    
+  },
+  "acls": [],
+  "methods": {}
+}

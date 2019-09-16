@@ -1,0 +1,69 @@
+{
+  "name": "ContactInfo_TB",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Address": {
+      "type": "string",
+      "required": true,
+      "length": 60,
+      "max": 60
+    },
+    "City": {
+      "type": "string",
+      "required": true,
+      "length": 50,
+      "max": 50
+    },
+    "Phone": {
+      "type": "string",
+      "required": true,
+      "length": 20,
+      "max": 20
+    },
+    "CelPhone": {
+      "type": "string",
+      "required": true,
+      "length": 20,
+      "max": 20
+    },
+    "EmergencyName": {
+      "type": "string",
+      "required": true,
+      "length": 100,
+      "max": 100
+    },
+    "EmergencyPhone": {
+      "type": "string",
+      "required": true,
+      "length": 20,
+      "max": 20
+    }
+  },
+  "validations": [],
+  "relations": {
+    "User": {
+      "type": "belongsTo",
+      "model": "AppUser_TB",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      }
+    },
+    "Country": {
+      "type": "belongsTo",
+      "model": "Country_TB",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

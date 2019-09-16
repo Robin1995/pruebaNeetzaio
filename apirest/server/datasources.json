@@ -1,0 +1,13 @@
+{
+  "db": {
+    "host": "147.75.123.140/32 ",
+    "port": 15543,
+    "url": "mongodb+srv://prueba:123@cluster0-sscf6.mongodb.net/test?retryWrites=true&w=majority",
+    "database": "userRegistration",
+    "password": "123",
+    "name": "db",
+    "user": "prueba",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}

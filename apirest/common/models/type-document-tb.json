@@ -1,0 +1,36 @@
+{
+  "name": "TypeDocument_TB",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "default":0
+    },
+    "NameTypeDocument": {
+      "type": "string",
+      "required": true,
+      "length": 50,
+      "max": 50
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Country_Id": {
+      "type": "hasMany",
+      "model": "UserDocument_TB",
+      "foreignKey": "TypeDocumentID",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      },
+      "through": "ContactInfo_TB"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
